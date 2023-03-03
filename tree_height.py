@@ -33,7 +33,7 @@ def main():
         path = "test/" + nos
         if "a" not in nos:
             with open(path, "r") as f:
-                text=f.read()
+                #text=f.read()
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
                 n = int(f.readline().strip())
