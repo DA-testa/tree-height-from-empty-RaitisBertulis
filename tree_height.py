@@ -7,20 +7,20 @@ import numpy
 
 def compute_height(n, parents):
     # Write this function
-    max_height = [0] * n
-    # Your code here
+     heights = [0] * n
+
     for i in range(n):
-        skaits = 0
-        t = i
-        while t != -1:
-            if max_height[t] !=0:
-                skaits = skaits + max_height[t]
+        node_height = 0
+        current = i
+        while current != -1:
+            if heights[current] != 0:
+                node_height += heights[current]
                 break
-            skaits = skaits + 1
-            t = parents[t]
-        max_height[i] = skaits
-        max_height=max(max_height)
-    return max_height
+            node_height += 1
+            current = parents[current]
+        heights[i] = node_height
+    return max(heights)
+
 
 
 def main():
