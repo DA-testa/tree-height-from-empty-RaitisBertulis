@@ -28,7 +28,7 @@ def main():
     cmd = input()
     if "I" in cmd:
         n=int(input())
-        parents = list(map(int, input().split()))
+        #parents = list(map(int, input().split()))
         print(compute_height(n, parents))
     # let user input file name to use, don't allow file names with letter a
     elif "F" in cmd:
@@ -41,7 +41,7 @@ def main():
                 n = int(f.readline().strip())
                 parents=list(map(int, f.readline().strip().split()))
     # call the function and output it's result
-                print(compute_height(n, parents))
+    print(compute_height(n, parents))
     
 
 # In Python, the default limit on recursion depth is rather low,
