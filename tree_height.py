@@ -13,7 +13,7 @@ def compute_height(n, parents):
         skaits = 0
         pasr = i
         while pasr != -1:
-            if heights[pasr] != 0:
+            if max_height[pasr] != 0:
                 skaits = skaits + max_height[pasr]
                 break
             skaits = 1 + skaits
