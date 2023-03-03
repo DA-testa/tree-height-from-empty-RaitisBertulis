@@ -5,9 +5,7 @@ import threading
 import numpy
 
 def compute_height(n, parents):
-    # Write this function
     max_height = [0] * n
-
     for i in range(n):
         skaits = 0
         pasr = i
@@ -21,17 +19,11 @@ def compute_height(n, parents):
     return max(max_height)
 
 def main():
-    # implement input form keyboard and from files
     cmd = input()
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
     if "F" in cmd:
         nos = input()
         if "a" not in nos:
             with open(f"test/{nos}") as file:
-    # input number of elements
-    # input values in one variable, separate with space, split these values in an array
-    # call the function and output it's result
                 n = int(file.readline().strip())
                 parents=list(map(int, file.readline().strip().split()))
                 print(compute_height(n, parents))
