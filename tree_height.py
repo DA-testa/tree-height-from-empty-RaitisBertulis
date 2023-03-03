@@ -5,17 +5,23 @@ import threading
 import numpy
 
 def compute_height(n, parents):
-    max_height = [0] * n
+    max_height = 0
+    height = [0] * n
     for i in range(n):
-        skaits = 0
-        pasr = i
-        while pasr != -1:
-            if max_height[pasr] != 0:
-                skaits = skaits + max_height[pasr]
+        height2 = 0
+        j= i
+        while j != -1:
+            if height[j] != 0:
+                height2 = height2 + height[j]
                 break
-            skaits = 1 + skaits
-            pasr = parents[pasr]
-        max_height[i] = skaits
+            height2 = 1 + height2
+            j = parents[j]
+        max_height=max(max_height, height2)
+        k = i
+        while k != -1 and height[k]==0:
+            heigth[k] = height2
+            heigth2 = heigth2 - 1
+            k = parents[k]
     return max(max_height)
 
 def main():
