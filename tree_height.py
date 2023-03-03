@@ -39,11 +39,11 @@ def main():
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
                 p = text.partition("\n")
-                p1 = int(p[0])
+                n = int(p[0])
                 mas=p[2].split(" ")
                 mas=numpy.array(mas)
     # call the function and output it's result
-                print(compute_height(p1, mas))
+                print(compute_height(n, mas))
     
 
 # In Python, the default limit on recursion depth is rather low,
