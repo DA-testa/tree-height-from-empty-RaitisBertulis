@@ -19,8 +19,7 @@ def compute_height(n, parents):
             skaits = 1 + skaits
             pasr = parents[pasr]
         max_height[i] = skaits
-        max_height = max(max_height)
-    return max_height
+    return max(max_height)
 
 def main():
     # implement input form keyboard and from files
