@@ -24,10 +24,8 @@ def main():
     cmd = input()
     if "I" in cmd:
         n=int(input())
-        parents = input()
-        mas=parents.split(" ")
-        mas=numpy.array(mas)
-        print(compute_height(n, mas))
+        parents = list(map(int, input().split()))
+        print(compute_height(n, parents))
     # let user input file name to use, don't allow file names with letter a
     elif "F" in cmd:
     # account for github input inprecision
@@ -38,10 +36,8 @@ def main():
                 text=f.read()
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
-                p = text.partition("\n")
-                n = int(p[0])
-                mas=p[2].split(" ")
-                mas=numpy.array(mas)
+                n = int(f.readline().strip())
+                parents=list(map(int, f.readline().strip().split()))
     # call the function and output it's result
                 print(compute_height(n, mas))
     
@@ -52,5 +48,5 @@ def main():
 sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
-main()
+#main()
 # print(numpy.array([1,2,3]))
