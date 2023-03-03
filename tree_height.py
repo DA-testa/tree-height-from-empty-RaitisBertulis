@@ -9,7 +9,7 @@ def compute_height(n, parents):
     for i in range(n):
         skaits = 0
         pasr = i
-        while pasr != -1
+        while pasr != -1:
             if max_height[pasr] != 0:
                 skaits = max_height[pasr] + skaits
                 break
