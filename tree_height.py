@@ -39,7 +39,7 @@ def main():
                 n = int(f.readline().strip())
                 parents=list(map(int, f.readline().strip().split()))
     # call the function and output it's result
-                print(compute_height(n, mas))
+                print(compute_height(n, parents))
     
 
 # In Python, the default limit on recursion depth is rather low,
