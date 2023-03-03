@@ -7,7 +7,7 @@ import numpy
 
 def compute_height(n, parents):
     # Write this function
-     heights = [0] * n
+    heights = [0] * n
 
     for i in range(n):
         node_height = 0
