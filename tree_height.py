@@ -30,7 +30,7 @@ def main():
     if "F" in cmd:
         nos = input()
         if "a" not in nos:
-            with open(f"test/{nos}") as file
+            with open(f"test/{nos}") as file:
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
