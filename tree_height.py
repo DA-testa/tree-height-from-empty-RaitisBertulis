@@ -10,8 +10,8 @@ def compute_height(n, parents):
     max_height = 0
     # Your code here
     for i in numpy.arange(n):
-    skaits = 1
-    sk = int(parents[i])
+        skaits = 1
+        sk = int(parents[i])
         while not (sk == -1):
             skaits += 1
             sk = int(parents[sk])
