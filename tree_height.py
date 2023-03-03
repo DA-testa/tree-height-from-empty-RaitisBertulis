@@ -19,7 +19,7 @@ def compute_height(n, parents):
     return max(max_height)
 
 def main():
-    cmd = input()
+    cmd = input("Izvelies teksta ievadisanas veidu (I vai F): ")
     if "F" in cmd:
         nos = input()
         if "a" not in nos:
@@ -28,8 +28,8 @@ def main():
                 parents=list(map(int, file.readline().strip().split()))
                 print(compute_height(n, parents))
     elif "I" in cmd:
-        n=int(input())
-        parents = list(map(int, input().split()))
+        n=int(input("Ievadi skaitu: "))
+        parents = list(map(int, input("Ievadi konkretos elementus: ").split()))
         print(compute_height(n, parents))
         
 # In Python, the default limit on recursion depth is rather low,
