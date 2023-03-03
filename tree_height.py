@@ -12,10 +12,10 @@ def compute_height(n, parents):
     for i in numpy.arange(n):
     skaits = 1
     sk = int(parents[i])
-    while not (sk == -1):
-        skaits = skaits + 1
-        sk = int(parents[sk])
-    max_height=max(max_height, skaits)
+        while not (sk == -1):
+            skaits += 1
+            sk = int(parents[sk])
+        max_height=max(max_height, skaits)
     return max_height
 
 
@@ -33,8 +33,8 @@ def main():
     # account for github input inprecision
         nos=input()
         path = "test/" + nos
-        if not "a" in nos:
-            with open(path, "t") as f:
+        if "a" not in nos:
+            with open(path, "r") as f:
                 text=f.read()
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
