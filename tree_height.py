@@ -30,10 +30,8 @@ def main():
     elif "F" in cmd:
     # account for github input inprecision
         nos=input()
-        path = "test/" + nos
         if "a" not in nos:
-            with open(path, "r") as f:
-                #text=f.read()
+            with open(f"test/{nos}") as f
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
                 n = int(f.readline().strip())
