@@ -31,7 +31,7 @@ def main():
     # account for github input inprecision
         nos=input()
         if "a" not in nos:
-            with open(f"test/{nos}") as f
+            with open(f"test/{nos}") as f:
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
                 n = int(f.readline().strip())
