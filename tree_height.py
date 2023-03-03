@@ -4,14 +4,13 @@ import sys
 import threading
 import numpy
 
-
 def compute_height(n, parents):
     # Write this function
     max_height = [0] * n
 
     for i in range(n):
         skaits = 0
-        pasr = i
+        pasr = 0
         while pasr != -1:
             if max_height[pasr] != 0:
                 skaits = skaits + max_height[pasr]
@@ -48,4 +47,3 @@ sys.setrecursionlimit(10**7)  # max depth of recursion
 threading.stack_size(2**27)   # new thread will get stack of such size
 threading.Thread(target=main).start()
 #main()
-# print(numpy.array([1,2,3]))
